@@ -20,6 +20,7 @@ router.get('/notes', async (ctx, next) => {
 
 router.post('/notes', async(ctx, next) => {
     notes.push({...ctx.request.body, id: nextId++});
+    //notes.push({...ctx.request.body, id: ctx.params.id});
     ctx.response.status = 204;
 });
 
